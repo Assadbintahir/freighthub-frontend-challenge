@@ -29,7 +29,6 @@ class Shipments extends Component {
 
     render() {
         const { shipments, pageInfo } = this.state;
-        console.log(pageInfo);
         if(shipments.length) {
             return (
                 <Container text>

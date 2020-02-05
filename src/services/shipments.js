@@ -10,4 +10,11 @@ export const fetchShipments = async (activePage) => {
     });
     result.data = shipments;
     return result;
+};
+
+export const fetchOneShipment = async (id) => {
+    const shipment = await fetch(`/shipments/${id}`).then(res => {
+        return res.json();
+    });
+    return shipment
 }
