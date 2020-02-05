@@ -7,5 +7,11 @@ export default (data) => {
         const linkInfo = /<([^>]+)>;\s+rel="([^"]+)"/ig.exec(d);
         parsed_data[linkInfo[2]]=linkInfo[1];
     }
+    parsed_data.totalPages = getTotalPages(parsed_data.last);
     return parsed_data;
+}
+
+const getTotalPages = (lastPage) => {
+    const pages = lastPage.split('&')[0];
+    return pages.split('=')[1];
 }

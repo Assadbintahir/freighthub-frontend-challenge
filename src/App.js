@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Route, Switch } from "react-router-dom";
-import Shipments from "./components/shimpments";
+import Shipments from "./containers/ShipmentsList";
 
 class App extends Component {
 
