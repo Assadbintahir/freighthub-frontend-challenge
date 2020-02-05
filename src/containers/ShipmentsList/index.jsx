@@ -19,8 +19,8 @@ class Shipments extends Component {
     }
 
     async loadShipments(activePage = 1) {
-            const { data, pageInfo } = await fetchShipments(activePage);
-            this.setState({ shipments: data , pageInfo });
+        const { data, pageInfo } = await fetchShipments(activePage);
+        this.setState({ shipments: data , pageInfo });
     }
 
     handlePagination = (event, data) => {

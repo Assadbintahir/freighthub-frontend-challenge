@@ -22,6 +22,7 @@ export class ShipmentDetails extends Component {
     componentDidMount() {
         const { props } = this;
         if(!props.location.data) {
+            // if someone directly access from URL
             this.loadShipments(props.match.params.id);
         }
     }
@@ -67,6 +68,7 @@ export class ShipmentDetails extends Component {
                                 <Item.Content>
                                     <Item.Header>{shipment.name}</Item.Header>
                                     {
+                                        // Show edit box in place of edit button
                                         editMode
                                             ? (<Input
                                                     floated='right'
